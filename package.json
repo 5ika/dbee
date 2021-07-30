@@ -1,0 +1,34 @@
+{
+  "name": "dbee",
+  "version": "1.0.0",
+  "description": "Manage Postgresql backups using S3",
+  "main": "dbee.js",
+  "repository": "https://github.com/5ika/dbee",
+  "author": "Tim Izzo (tim@octree.ch)",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --experimental-top-level-await dbee.js",
+    "build": "pkg . --compress GZip"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "lodash": "^4.17.21",
+    "minio": "^7.0.18",
+    "yargs": "^17.0.1"
+  },
+  "devDependencies": {
+    "pkg": "^5.3.1"
+  },
+  "bin": {
+    "dbee": "./dbee.js"
+  },
+  "pkg": {
+    "scripts": [
+      "cmds/**/*.js"
+    ],
+    "targets": [
+      "node14-linux-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
