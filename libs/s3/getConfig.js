@@ -10,7 +10,7 @@ const getS3Config = s3Name => {
   if (serversCount === 1)
     return { ...s3Servers[serverNames[0]], name: serverNames[0] };
 
-  throw new Error(`No S3 server corresponding to '${s3Servers}' in config.`);
+  throw new Error(`No S3 server corresponding to '${s3Name}' in config.`);
 };
 
 module.exports = getS3Config;

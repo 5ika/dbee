@@ -21,8 +21,9 @@ exports.builder = function (yargs) {
     },
     useSSL: {
       alias: "s",
+      type: "boolean",
       describe: "Use SSL for server connection",
-      default: true,
+      default: false,
     },
     bucket: {
       alias: "b",
