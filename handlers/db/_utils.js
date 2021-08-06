@@ -9,8 +9,8 @@ const splitPsqlParts = rawParam => {
 const splitS3Parts = rawParam => {
   if (!rawParam) throw new Error("No filename specified");
   if (rawParam.includes("/")) {
-    const [psqlName, dbName] = rawParam.split("/");
-    return { psqlName, dbName };
+    const [s3Name, fileName] = rawParam.split("/");
+    return { s3Name, fileName };
   } else return { fileName: rawParam, s3Name: null };
 };
 
